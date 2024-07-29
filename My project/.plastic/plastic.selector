@@ -1,4 +1,0 @@
-repository "PASHA TEHNIC@seregakob1217@cloud"
-  path "/"
-    br "/main"
-    co "/main"
