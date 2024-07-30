@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmokeSystem : MonoBehaviour
+public class SmokeSystem : Sounds
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Animator anim;
+    [SerializeField] private ParticleSystem particle;
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Smoke") && !_audioSource.isPlaying)
+        {
+            anim.SetBool("Smoke",true);
+        }
+
+        if(Input.GetKeyUp(KeyCode.Mouse0)) anim.SetBool("Smoke", false);
+
+        if (Input.GetKeyDown(KeyCode.F)) anim.SetTrigger("Droped");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void tyaga()
     {
-        
+        PlaySound(0, 3);
+    }
+    
+    private void blow()
+    {
+        PlaySound(3, 6);
+        particle.Play();
     }
 }

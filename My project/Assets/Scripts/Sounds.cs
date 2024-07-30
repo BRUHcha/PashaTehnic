@@ -8,9 +8,9 @@ public class Sounds : MonoBehaviour
 
     public AudioSource _audioSource => GetComponent<AudioSource>();
 
-    public void PlaySound(float volume = 0.5f)
+    public void PlaySound(int min = 0, int max = 0, float volume = 0.5f)
     {
-        int i = Random.Range(0,clips.Length);
+        int i = Random.Range(min,max);
         _audioSource.PlayOneShot(clips[i], volume);
     }
 }

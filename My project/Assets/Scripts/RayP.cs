@@ -34,7 +34,9 @@ public class RayP : MonoBehaviour
             {
                 _text.text = "Сука только попробуй нажать [E]";
                 if(Input.GetKeyDown(KeyCode.E))
+                {
                     clickable.DoSomething();
+                }
             }
 
             else

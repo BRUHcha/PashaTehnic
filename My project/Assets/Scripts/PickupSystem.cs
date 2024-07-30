@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class PickupSystem : MonoBehaviour, IClickable
 {
+    [SerializeField] private Animator anim;
+    [SerializeField] private SmokeSystem script;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private BoxCollider coll;
     [SerializeField] private Transform ItemContainer, player, plCam;
@@ -28,11 +30,15 @@ public class PickupSystem : MonoBehaviour, IClickable
         {
             rb.isKinematic = false;
             coll.isTrigger = false;
+            script.enabled = false;
+            anim.enabled = false;
         }
         if (equipped)
         {
             rb.isKinematic = true;
             coll.isTrigger = true;
+            script.enabled = true;
+            anim.enabled = true;
         }
     }
 
@@ -48,6 +54,9 @@ public class PickupSystem : MonoBehaviour, IClickable
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
         transform.localScale = Vector3.one;
+
+        script.enabled = true;
+        anim.enabled = true;
     }
     private void Drop()
     {
@@ -59,12 +68,16 @@ public class PickupSystem : MonoBehaviour, IClickable
         rb.isKinematic = false;
         coll.isTrigger = false;
 
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        script.enabled = false;
+        anim.enabled = false;
 
-        rb.AddForce(plCam.forward * dropForwardForce, ForceMode.Impulse);
-        rb.AddForce(plCam.up * dropUpwardForce, ForceMode.Impulse);
+        //rb.velocity = player.GetComponent<Rigidbody>().velocity;
 
-        float rand = Random.Range(-2f, 2f);
-        rb.AddTorque(new Vector3(rand, rand, rand));
+        //rb.AddForce(plCam.forward * dropForwardForce, ForceMode.Impulse);
+        //rb.AddForce(plCam.up * dropUpwardForce, ForceMode.Impulse);
+
+        // float rand = Random.Range(-2f, 2f);
+        //rb.AddTorque(new Vector3(rand, rand, rand));
+
     }
 }
