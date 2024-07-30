@@ -698,8 +698,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d7a80a475d3240745b28805debcc9d66, type: 3}
   - {fileID: 8300000, guid: 34049e3040701654abeeeb0f97aa9507, type: 3}
   - {fileID: 8300000, guid: 3163480ceec50084daea51a3db5b80e0, type: 3}
+  - {fileID: 8300000, guid: 4d2cf3c4eea85144eb640b5e0d0e18c3, type: 3}
   anim: {fileID: 94641295}
   particle: {fileID: 2142324833}
+  peredozChance: 100
 --- !u!95 &94641295
 Animator:
   serializedVersion: 5
@@ -12323,7 +12325,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 0.5
   simulationSpeed: 0.3
-  stopAction: 1
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
