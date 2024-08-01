@@ -20,7 +20,7 @@ public class Choppo : Sounds, IClickable
     {
         if (!_audioSource.isPlaying)
         {
-            PlaySound();
+            PlayRandomSound(0, 6);
             rb.AddForce(Vector3.up * straight);
             anim.SetTrigger("GroundJump");
         }

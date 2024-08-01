@@ -23,12 +23,12 @@ public class SmokeSystem : Sounds
 
     private void tyaga()
     {
-        PlaySound(0, 3);
+        PlayRandomSound(0, 3);
     }
     
     private void blow()
     {
-        PlaySound(3, 6);
+        PlayRandomSound(3, 6);
         particle.Play();
     }
 
@@ -45,6 +45,6 @@ public class SmokeSystem : Sounds
     private IEnumerator PeredozDelay()
     {
         yield return new WaitForSeconds(1f);
-        PlaySound(6, 7);
+        PlaySound(6);
     }
 }
