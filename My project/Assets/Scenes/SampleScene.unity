@@ -9595,6 +9595,7 @@ Transform:
   - {fileID: 280475744}
   - {fileID: 730815930}
   - {fileID: 684250193}
+  - {fileID: 1877355736}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1242778543 stripped
@@ -11635,7 +11636,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.73003, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1240494653}
   m_LocalEulerAnglesHint: {x: 0, y: -47.083, z: 0}
 --- !u!95 &1877355737
 Animator:
@@ -17639,7 +17640,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1240494653}
     m_Modifications:
     - target: {fileID: 4496792462986514999, guid: ea1fe50b1fdfd244fa1a1e3f429b8c0f, type: 3}
       propertyPath: m_Name
@@ -17910,11 +17911,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 5724431870767464815}
+  - {fileID: 150037297}
   - {fileID: 11477749}
-  - {fileID: 6081902980779241166}
   - {fileID: 1240494653}
   - {fileID: 268665546}
-  - {fileID: 150037297}
   - {fileID: 1225952452}
   - {fileID: 64481779}
   - {fileID: 2079340152}
